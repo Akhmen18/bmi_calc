@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 const labelTextStyle = TextStyle(
+  fontFamily: 'SpaceGrotesk',
   fontSize: 18.0,
-  color: Color(0xFFe4fbff),
+  color: Color(0xFFedeef7),
 );
 
 class IconContent extends StatelessWidget {
