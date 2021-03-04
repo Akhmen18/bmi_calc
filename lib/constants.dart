@@ -19,6 +19,9 @@ const Color kBottomContainerColor = Color(0xFF7868e6);
 const Color kActiveActionColor = Color(0xFF7868e6);
 const Color kInactiveActionColor = Color(0xFFb8b5ff);
 
+const Color kBigButtonFillColor = Color(0xFF7868e6);
+const Color kSmallButtonFillColor = Color(0xBF7868e6);
+
 const double kMinHeight = 50.0;
 const double kMaxHeight = 280.0;
 

@@ -17,7 +17,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
-  int weight = 60;
+  int weight = 50;
+  int age = 12;
 
   @override
   Widget build(BuildContext context) {
@@ -131,16 +132,36 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FloatingActionButton(
-                              backgroundColor: kActiveActionColor,
-                              child: Icon(Icons.add),
+                            RoundIconButton(
+                              onClicked: () {
+                                setState(() {
+                                  if (weight > 0) {
+                                    weight--;
+                                  }
+                                });
+                              },
+                              buttonFillColor: kSmallButtonFillColor,
+                              icon: FontAwesomeIcons.minus,
+                              boxConstraint: BoxConstraints.tightFor(
+                                width: 45.0,
+                                height: 45.0,
+                              ),
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            FloatingActionButton(
-                              backgroundColor: kInactiveActionColor,
-                              child: Icon(Icons.add),
+                            RoundIconButton(
+                              onClicked: () {
+                                setState(() {
+                                  weight++;
+                                });
+                              },
+                              buttonFillColor: kBigButtonFillColor,
+                              icon: FontAwesomeIcons.plus,
+                              boxConstraint: BoxConstraints.tightFor(
+                                width: 56.0,
+                                height: 56.0,
+                              ),
                             ),
                           ],
                         ),
@@ -152,6 +173,54 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: kActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('AGE'),
+                        Text(
+                          age.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              onClicked: () {
+                                setState(() {
+                                  if (age > 0) {
+                                    age--;
+                                  }
+                                });
+                              },
+                              buttonFillColor: kSmallButtonFillColor,
+                              icon: FontAwesomeIcons.minus,
+                              boxConstraint: BoxConstraints.tightFor(
+                                width: 45.0,
+                                height: 45.0,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              onClicked: () {
+                                setState(() {
+                                  if (age < 140) {
+                                    age++;
+                                  }
+                                });
+                              },
+                              buttonFillColor: kBigButtonFillColor,
+                              icon: FontAwesomeIcons.plus,
+                              boxConstraint: BoxConstraints.tightFor(
+                                width: 56.0,
+                                height: 56.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -164,5 +233,29 @@ class _InputPageState extends State<InputPage> {
             )
           ],
         ));
+  }
+}
+
+class RoundIconButton extends StatelessWidget {
+  RoundIconButton(
+      {@required this.icon,
+      @required this.boxConstraint,
+      @required this.buttonFillColor,
+      @required this.onClicked});
+  final IconData icon;
+  final BoxConstraints boxConstraint;
+  final Color buttonFillColor;
+  final Function onClicked;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      child: Icon(icon),
+      onPressed: onClicked,
+      shape: CircleBorder(),
+      elevation: 0.0,
+      fillColor: buttonFillColor,
+      constraints: boxConstraint,
+    );
   }
 }
