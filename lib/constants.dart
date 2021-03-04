@@ -23,7 +23,7 @@ const double kMinHeight = 50.0;
 const double kMaxHeight = 280.0;
 
 const kNumberTextStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 45.0,
   fontFamily: 'SpaceGrotesk',
   fontWeight: FontWeight.w700,
 );
