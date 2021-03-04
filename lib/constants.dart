@@ -31,3 +31,30 @@ const kNumberTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
   color: Color(0xFFedeef7),
 );
+
+const kTitleTextStyle = TextStyle(
+  fontSize: 50.0,
+  fontFamily: 'SpaceGrotesk',
+  fontWeight: FontWeight.w700,
+  color: Color(0xFFedeef7),
+);
+
+const kResultTextStyle = TextStyle(
+  fontSize: 25.0,
+  fontFamily: 'SpaceGrotesk',
+  fontWeight: FontWeight.w500,
+  color: Color(0xFFa6f0c6),
+);
+
+const kBMITextStyle = TextStyle(
+  fontSize: 100.0,
+  fontFamily: 'SpaceGrotesk',
+  fontWeight: FontWeight.w700,
+  color: Color(0xFFedeef7),
+);
+
+const kBodyTextStyle = TextStyle(
+  fontSize: 22.0,
+  fontFamily: 'SpaceGrotesk',
+  color: Color(0xFFedeef7),
+);

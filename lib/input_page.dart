@@ -4,6 +4,8 @@ import 'package:bmi_calc/icon_content.dart';
 import 'package:bmi_calc/reusable_card.dart';
 import 'package:bmi_calc/constants.dart';
 import 'package:bmi_calc/results_page.dart';
+import 'package:bmi_calc/bottom_button.dart';
+import 'package:bmi_calc/round_icon_button.dart';
 
 enum Gender {
   male,
@@ -226,53 +228,18 @@ class _InputPageState extends State<InputPage> {
                 ),
               ],
             )),
-            GestureDetector(
+            BottomButton(
+              buttonTitle: 'Calculate',
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ResultsPage()));
-              },
-              child: Container(
-                color: kBottomContainerColor,
-                margin: EdgeInsets.only(top: 10.0),
-                width: double.infinity,
-                height: kBottomContainerHeight,
-                child: Center(
-                  child: Text(
-                    'Calculate',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 25.0,
-                      color: Color(0xFFedeef7),
-                    ),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResultsPage(),
                   ),
-                ),
-              ),
+                );
+              },
             )
           ],
         ));
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton(
-      {@required this.icon,
-      @required this.boxConstraint,
-      @required this.buttonFillColor,
-      @required this.onClicked});
-  final IconData icon;
-  final BoxConstraints boxConstraint;
-  final Color buttonFillColor;
-  final Function onClicked;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      child: Icon(icon),
-      onPressed: onClicked,
-      shape: CircleBorder(),
-      elevation: 0.0,
-      fillColor: buttonFillColor,
-      constraints: boxConstraint,
-    );
   }
 }
