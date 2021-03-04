@@ -5,7 +5,7 @@ import 'package:bmi_calc/reusable_card.dart';
 
 const double bottomContainerHeight = 65.0;
 const Color activeCardColor = Color(0xFF242424);
-const Color inactiveCardColor = Color(0xFF1b1b1b);
+const Color inactiveCardColor = Color(0xF21a1a1a);
 const Color bottomContainerColor = Color(0xFF7868e6);
 
 enum Gender {
