@@ -15,6 +15,6 @@ A BMI Calculator App with some beautiful UI.
 <p> 
     Screenshots:
     <br>
-    <img src="https://github.com/Akhmen18/bmi_calc/blob/main/Desktop-SS1.png" height=640px width=360px>
-    <img src="https://github.com/Akhmen18/bmi_calc/blob/main/Desktop-SS2.png" height=640px width=360px>
+    <img src="https://github.com/Akhmen18/bmi_calc/blob/main/Desktop-SS1.png" height=360px width=640px>
+    <img src="https://github.com/Akhmen18/bmi_calc/blob/main/Desktop-SS2.png" height=360px width=640px>
     <br> </p>
