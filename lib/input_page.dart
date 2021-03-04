@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calc/icon_content.dart';
 import 'package:bmi_calc/reusable_card.dart';
@@ -26,7 +25,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('BMI Calculator')),
+          title: Text('BMI Calculator'),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -240,7 +239,11 @@ class _InputPageState extends State<InputPage> {
                 child: Center(
                   child: Text(
                     'Calculate',
-                    style: kLabelTextStyle,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 25.0,
+                      color: Color(0xFFedeef7),
+                    ),
                   ),
                 ),
               ),

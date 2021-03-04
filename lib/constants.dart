@@ -29,4 +29,5 @@ const kNumberTextStyle = TextStyle(
   fontSize: 45.0,
   fontFamily: 'SpaceGrotesk',
   fontWeight: FontWeight.w700,
+  color: Color(0xFFedeef7),
 );
