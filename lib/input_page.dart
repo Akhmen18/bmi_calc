@@ -17,6 +17,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -89,9 +90,9 @@ class _InputPageState extends State<InputPage> {
                       padding: const EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
                       child: SliderTheme(
                         data: SliderTheme.of(context).copyWith(
-                          thumbColor: kActiveSliderColor,
-                          activeTrackColor: kActiveSliderColor,
-                          inactiveTrackColor: kInactiveSliderColor,
+                          thumbColor: kActiveActionColor,
+                          activeTrackColor: kActiveActionColor,
+                          inactiveTrackColor: kInactiveActionColor,
                           overlayColor: Color(0x297868e6),
                           thumbShape:
                               RoundSliderThumbShape(enabledThumbRadius: 12.0),
@@ -119,6 +120,32 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('WEIGHT'),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              backgroundColor: kActiveActionColor,
+                              child: Icon(Icons.add),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            FloatingActionButton(
+                              backgroundColor: kInactiveActionColor,
+                              child: Icon(Icons.add),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                     colour: kActiveCardColor,
                   ),
                 ),

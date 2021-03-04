@@ -16,8 +16,8 @@ const Color kActiveCardColor = Color(0xFF242424);
 const Color kInactiveCardColor = Color(0xF21a1a1a);
 const Color kBottomContainerColor = Color(0xFF7868e6);
 
-const Color kActiveSliderColor = Color(0xFF7868e6);
-const Color kInactiveSliderColor = Color(0xFFb8b5ff);
+const Color kActiveActionColor = Color(0xFF7868e6);
+const Color kInactiveActionColor = Color(0xFFb8b5ff);
 
 const double kMinHeight = 50.0;
 const double kMaxHeight = 280.0;
